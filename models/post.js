@@ -7,14 +7,32 @@ Post.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        posr: {
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        date_posted: {
+            type: DataTypes.DATE,
+            allowNull: false,
 
         },
+        content: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+
+        },
+        title: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        author_id:{
+            model:user,
+            
+        }
     },
     {
         sequelize,
